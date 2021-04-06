@@ -1,0 +1,103 @@
+html{
+  overflow-x: hidden;
+}
+.nav{
+  background-image: url(/img/navbg.jpg);
+  width: 100%;
+  height: 139px;
+  /* line-height: 139px; */
+}
+.nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+.login{
+  background-color: rgb(3, 148, 3);
+  color: #fff !important;
+  border: yellow solid 2px;
+}
+.logo1{
+  height: 100px;
+}
+.section01{
+background-image: url(/img/index_img-01.1.png);
+background-size: contain;
+width: 100%;
+height: 900px;
+position: relative;
+background-repeat: no-repeat;
+}
+.indexwords{
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  width: 400px;
+  height: 300px;
+}
+.icons{
+width: 135px;
+height: 135px;
+margin: 5px;
+}
+.iconsbox{
+  position: absolute;
+  top: 28%;
+  right: 5%;
+}
+.buttons01{
+  position: absolute;
+  top: 80%;
+  right: 10%;
+}
+.buttons{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+  margin: 10px;
+  width: 150px;
+}
+.more{
+color: rgb(37, 128, 72) ;
+border:  rgb(37, 128, 72) 2px solid;
+}
+.loginimmediately{
+background-color:  rgb(37, 128, 72) ;
+}
+.section02{
+  background-image: url(/img/section02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+  position: relative;
+}
+.section03{
+  background-image: url(/img/mainbg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+  width: 100%;
+  position: relative;
+}
+.rank{
+position: absolute;
+left: 15%;
+top: 30%;
+font-size: 25px;
+font-weight: 500;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: black 2px solid;
+}
+footer img{
+  width: 150px;
+  height: 60%;
+}
+footer{
+  background-color: lightgrey;
+}
