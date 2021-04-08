@@ -1,8 +1,9 @@
 html{
   overflow-x: hidden;
 }
+
 .nav{
-  background-image: url(/img/navbg.jpg);
+  background-image: url("../img/navbg.jpg");
   width: 100%;
   height: 139px;
   /* line-height: 139px; */
@@ -22,10 +23,10 @@ html{
   height: 100px;
 }
 .section01{
-background-image: url(/img/index_img-01.1.png);
+background-image: url("../img/index_img-01.1.png");
 background-size: contain;
 width: 100%;
-height: 900px;
+height: 120vh;
 position: relative;
 background-repeat: no-repeat;
 }
@@ -43,13 +44,14 @@ margin: 5px;
 }
 .iconsbox{
   position: absolute;
-  top: 28%;
+  top: 65%;
   right: 5%;
 }
 .buttons01{
   position: absolute;
-  top: 80%;
+  top: 180%;
   right: 10%;
+  z-index: 99;
 }
 .buttons{
   font-size: 20px;
@@ -66,18 +68,18 @@ border:  rgb(37, 128, 72) 2px solid;
 background-color:  rgb(37, 128, 72) ;
 }
 .section02{
-  background-image: url(/img/section02.jpg);
-  background-size: cover;
+  background-image: url("../img/section02.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 1000px;
+  height: 150vh;
   width: 100%;
   position: relative;
 }
 .section03{
-  background-image: url(/img/mainbg2.jpg);
+  background-image: url("../img/mainbg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 120vh;
   width: 100%;
   position: relative;
 }

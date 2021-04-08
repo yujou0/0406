@@ -1,9 +1,9 @@
 .recipesection01{
-    background-image: url(/img/recipetop.jpg);
+    background-image: url("../img/recipetop.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
-    height: 1200px;
+    height: 150vh;
 }
 #demo{
     width: 941px;
@@ -19,4 +19,30 @@
     height: 359px;
     display: none;
 }
+#demo4{
+    width: 941px;
+    height: 359px;
+}
+#demo5{
+    width: 941px;
+    height: 359px;
+    display: none;
+}
+#demo6{
+    width: 941px;
+    height: 359px;
+}
+#demo7{
+    width: 941px;
+    height: 359px;
+    display: none;
+}
 
+.leftbutton{
+    position: absolute;
+    left: -30%;
+}
+.rightbutton{
+    position: absolute;
+    right: -30%;
+}

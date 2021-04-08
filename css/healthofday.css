@@ -1,0 +1,106 @@
+.activesection01 {
+    background-image: url("../img/index_img-01.3.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.text-green {
+    color: green;
+}
+
+hr {
+    border: 0;
+    background-color: #000;
+    height: 5px;
+}
+
+.words {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.inputs {
+    /* 隐藏原有樣式 */
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    /* 增加新樣式:未選中 */
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    position: static;
+    margin: 15px 5px 0 0!important;
+    background-size: cover;
+    position: absolute;
+}
+
+td {
+    position: relative;
+}
+
+.inputs:checked {
+    /* 選中 */
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.001);
+    border-radius: 50%;
+    border: 3px grey solid;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2%;
+    left: 0%;
+}
+
+.bg-orange {
+    background-color: rgb(233, 197, 131);
+}
+
+.bg-lightorange {
+    background-color: rgb(233, 209, 131);
+}
+
+.bg-lightyellow {
+    background-color: rgb(252, 245, 185);
+}
+
+th, tr, td {
+    border: black 2px solid !important;
+}
+
+.submithealthformbutton {
+    background-color: white;
+    border: green 3px solid;
+    color: green;
+    font-size: 18px;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 50px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+hr {
+    border: 0;
+    background-color: #000;
+    height: 5px;
+}
+.bg-lightgrey{
+    background-color: lightgray;
+}
+.inputprescriptionlabels{
+    width: 90%;
+    background-color: lightgray;
+    font-size: 30px;
+    font-weight: 1000;
+}
+.selections{
+    width: 90%;
+    font-weight: 1000;
+    padding: 5px;
+}
+#result{
+    display: none;
+}

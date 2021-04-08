@@ -1,0 +1,24 @@
+.activesection01{
+    background-image: url("../img/index_img-01.3.png");
+    background-size: cover;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    }
+.loginform{
+    font-size: 20px;
+    line-height: 20px;
+    /* position: absolute; */
+    /* left: 50%; */
+}
+
+.inputsex{
+    width: 20px;
+    height: 20px;
+}
+.inputexperience{
+    width: 20px;
+    height: 20px;
+    line-height: 50px;
+}

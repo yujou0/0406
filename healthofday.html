@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/healthofday.css">
+</head>
+
+<body class="bg-white">
+    <!-- header -->
+    <div class="headerpage"></div>
+
+    <!-- 內容 -->
+    <section class="activesection01">
+        <img class="indexwords" src="img/index_img-01.2.png" alt="">
+    </section>
+    <div class="d-flex justify-content-center">
+        <h1 class="text-green m-5">{{3/30}} 健康量表</h1>
+    </div>
+    <section class="row">
+        <div class="col-6 border border-dark">
+            <div class="d-flex jus m-5">
+                <h2 class="text-left text-green">| STEP1</h2>
+            </div>
+            <div class="d-flex justify-content-center flex-column p-5">
+                <div class="d-flex jus bmiform m-3 align-items-center flex-wrap">
+                    <p>BMI =&nbsp;</p><input class="bg-lightgrey" type="text" value=""><span>kg&nbsp;&nbsp;/</span>
+                    <div class="showheight m-3">
+                        <span>{{165}} </span><span class="smallword">M<sup>2</sup></span>
+                    </div>
+                    <span>=&nbsp;&nbsp;</span><span class="showheight">{{20.2}}</span>
+                </div>
+                <div class="d-flex bmiform m-3 align-items-center">
+                    <span>今日腰圍</span><input class="bg-lightgrey m-3" type="text"><span>cm</span>
+                </div>
+                <div class="d-flex bmiform m-3 align-items-center">
+                    <span>今天是否均衡且定時攝取三餐?</span>
+                    <input class="m-2" type="radio" name="eatontime" value="yes">是
+                    <input class="m-2" name="eatontime" type="radio" value="no">否
+                </div>
+            </div>
+        </div>
+        <div class="col-6 border border-dark p-5">
+            <div>
+                <h3>BMI數值說明</h3>
+                <p class="words">
+                    ●　綠燈 (18.5 ≦ BMI<24)：正常體重，請繼續保持！<br>
+                        ●　黃燈 (24 ≦ BMI<27)：體重過重，可以參考我們的健康處方作為自己未來一週的行動計畫！<br>
+                            ●　紅燈 (BMI ≧ 27)：屬於「肥胖」。除了嘗試將我們的健康處方做為未來一週的行動計畫外，也可以尋求專業醫師建議喔！
+                </p>
+            </div>
+            <br>
+            <div>
+                <h3>腰圍數值說明</h3>
+                <p class="words">
+                    ●　綠燈 (男性：<90公分，女性：<80公分)：正常範圍，請繼續保持！<br>
+                        ●　紅燈(男性：≧90公分，女性：≧80公分)： 腹部肥胖，可以參考我們的健康處方作為自己未來一週的行動計畫！
+                </p>
+            </div>
+        </div>
+        <div class="col-6 border border-dark p-5">
+            <div class="d-flex">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="bg-orange">
+                            <th scope="col" width="70px">面向</th>
+                            <th scope="col" width="250px">項目</th>
+                            <th scope="col" width="100px">每周0天</th>
+                            <th scope="col" width="120px">每周1~2天</th>
+                            <th scope="col" width="120px">每周3~4天</th>
+                            <th scope="col" width="120px">每周5~7天</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="bg-lightorange" rowspan="2">身體</th>
+                            <td class="bg-lightorange">1. 覺得精疲力竭</td>
+                            <td class="bg-lightorange"><input class="inputtired inputs" type="radio" name="tired"
+                                    value="answer0101">0</td>
+                            <td class="bg-lightorange"><input class="inputtired inputs" type="radio" name="tired"
+                                    value="answer0102">1</td>
+                            <td class="bg-lightorange"><input class="inputtired inputs" type="radio" name="tired"
+                                    value="answer0103">2</td>
+                            <td class="bg-lightorange"><input class="inputtired inputs" type="radio" name="tired"
+                                    value="answer0104">3</td>
+                        <tr class="bg-lightyellow">
+                            <td>2. 覺得睡眠不足或中斷</td>
+                            <td><input class="inputsleepy inputs" type="radio" name="sleepy" value="answer0201">0</td>
+                            <td><input class="inputsleepy inputs" type="radio" name="sleepy" value="answer0202">1</td>
+                            <td><input class="inputsleepy inputs" type="radio" name="sleepy" value="answer0203">2</td>
+                            <td><input class="inputsleepy inputs" type="radio" name="sleepy" value="answer0204">3</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="bg-lightorange" rowspan="3">心理</th>
+                            <td class="bg-lightorange">3. 感覺緊張不安</td>
+                            <td class="bg-lightorange"><input class="inputnervous inputs" type="radio" name="nervous"
+                                    value="answer0301">0</td>
+                            <td class="bg-lightorange"><input class="inputnervous inputs" type="radio" name="nervous"
+                                    value="answer0301">1</td>
+                            <td class="bg-lightorange"><input class="inputnervous inputs" type="radio" name="nervous"
+                                    value="answer0301">2</td>
+                            <td class="bg-lightorange"><input class="inputnervous inputs" type="radio" name="nervous"
+                                    value="answer0301">3</td>
+                        <tr class="bg-lightyellow">
+                            <td>4. 覺得容易苦惱或動怒</td>
+                            <td><input class="inputangry inputs" type="radio" name="angry" value="answer0401">0</td>
+                            <td><input class="inputangry inputs" type="radio" name="angry" value="answer0402">1</td>
+                            <td><input class="inputangry inputs" type="radio" name="angry" value="answer0403">2</td>
+                            <td><input class="inputangry inputs" type="radio" name="angry" value="answer0404">3</td>
+                        </tr>
+                        <tr class="bg-lightorange">
+                            <td>5. 覺得憂鬱、情緒低落</td>
+                            <td><input class="inputsad inputs" type="radio" name="sad" value="answer0501">0</td>
+                            <td><input class="inputsad inputs" type="radio" name="sad" value="answer0502">1</td>
+                            <td><input class="inputsad inputs" type="radio" name="sad" value="answer0503">2</td>
+                            <td><input class="inputsad inputs" type="radio" name="sad" value="answer0504">3</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <th class="bg-lightyellow" scope="row" rowspan="2">社交</th>
+                            <td class="bg-lightyellow">6. 有跟親友聯繫 (如：line、簡訊、電話、見面等)</td>
+                            <td class="bg-lightyellow"><input id="inputs" class="inputcontact inputs" type="radio"
+                                    name="contact" value="answer0601">3</td>
+                            <td class="bg-lightyellow"><input class="inputcontact inputs" type="radio" name="contact"
+                                    value="answer0602">2</td>
+                            <td class="bg-lightyellow"><input class="inputcontact inputs" type="radio" name="contact"
+                                    value="answer0603">1</td>
+                            <td class="bg-lightyellow"><input class="inputcontact inputs" type="radio" name="contact"
+                                    value="answer0604">0</td>
+                        <tr class="bg-lightorange">
+                            <td>7. 有走出家門做活動(如：工作、辦事情、從事休閒活動等)</td>
+                            <td><input class="inputactivity inputs" type="radio" name="activity" value="answer0701">3
+                            </td>
+                            <td><input class="inputactivity inputs" type="radio" name="activity" value="answer0701">2
+                            </td>
+                            <td><input class="inputactivity inputs" type="radio" name="activity" value="answer0701">1
+                            </td>
+                            <td><input class="inputactivity inputs" type="radio" name="activity" value="answer0701">0
+                            </td>
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6 border border-dark p-5">
+            <h3>分數說明</h3>
+            <p class="words">
+                ●　綠燈 (0-6分)：您的身心調適地很好，請保持！<br>
+                ●　黃燈 (7-14分)：您的身心有些失調，可以參考我們<br>的健康處方作為自己未來一週的行動計畫！<br>
+                ●　紅燈 (15-21分)：您的身心已失調，除了嘗試將我<br>們的健康處方做為未來一週的行動計畫外，要視情況向<br>外求援！
+            </p>
+        </div>
+        <div class="col-12 border border-dark p-5">
+            <h2 class="text-left text-green">| STEP3</h2>
+            <span class="words">
+                <label for="">我在一天中可以自由運用的時間</label>
+                <input class="inputfreetime m-3" type="radio" name="freetime" value="freetime30mins">30分鐘
+                <input class="inputfreetime m-3" type="radio" name="freetime" value="freetime60mins">60分鐘
+                <input class="inputfreetime m-3" type="radio" name="freetime" value="freetime120mins">120分鐘
+            </span>
+        </div>
+        <div class="container ">
+            <div class="col-12  p-5 ">
+                <div class="d-flex justify-content-center">
+                    <h1 class="col-6">日期<span class="bg-lightgrey">{{3/31}}</span></h1>
+                    <h1 class="col-6">得分<span class="bg-lightgrey">{{3/31}}</span></h1>
+                </div>
+                <h2 class="text-left text-green m-5 d-flex">| 我的專屬處方</h2>
+                <p class="words ml-5">
+                    根據您的健康量表總分、以及每一天可以自由分配的時間，提供客製化專屬處方<br>。將處方當作自己這一週的行動計畫，在＿{{4/30}}＿（日期）回來完成檢測，即可<br>獲得樂活勳章！只要集滿6枚勳章，即有機會獲得好禮！
+                </p>
+                <h2 class="text-left text-green m-5 d-flex">| 處方內容</h2>
+                <div class="container px-5">
+                    <label for="" class="inputprescriptionlabels">利用五分鐘，跟坣娜學習瑜珈</label>
+                    <input class="inputprescription" type="radio" name="activity" value="prescription01">
+                    <br>
+                    <label for="" class="inputprescriptionlabels">為自己做一頓快手早餐</label>
+                    <input class="inputprescription" type="radio" name="activity" value="prescription02">
+                    <br>
+                    <label for="" class="inputprescriptionlabels">好好品嘗一杯咖啡</label>
+                    <input class="inputprescription" type="radio" name="activity" value="prescription03">
+                    <br>
+                    <label for="" class="inputprescriptionlabels">走出戶外曬曬太陽</label>
+                    <input class="inputprescription" type="radio" name="activity" value="prescription04">
+                    <br>
+                    <label for="" class="inputprescriptionlabels">主動和他人打招呼、聊聊天</label>
+                    <input class="inputprescription" type="radio" name="activity" value="prescription05">
+                </div>
+                <h2 class="text-left text-green my-5 d-flex">貼心提醒：家庭照顧者關懷專線 0800-50-7272 (台語：有你，真好真好)</h2>
+                <select class="m-5 words selections">
+                    <option>還想了解更多健康點子嗎?點擊看更多分享!</option>
+                    <option>居家運動比你想得簡單，到國建署網站看看</option>
+                    <option>不管是上班族、銀髮族，都可以參考的運動操</option>
+                    <option>到「照顧夯主廚」學習更多快手料理</option>
+                    <option>你累了嗎? 來照顧咖啡館喝杯咖啡吧</option>
+                    <option>看一看照顧電視台跟照顧讀書會</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <div class="d-flex justify-content-center">
+        <button id="submitresult" class="submithealthformbutton m-5" type="submit">送出檢測結果&nbsp;&nbsp;></button>
+    </div>
+    <div id="result">
+        <hr>
+    <div class="d-flex justify-content-center m-5">
+        <img src="img/finalpage.png" alt="">
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="./index.html"><button class="submithealthformbutton m-5"><&nbsp;&nbsp;回到首頁</button></a>
+    
+    <button class="submithealthformbutton m-5">分享至FB&nbsp;&nbsp;></button>
+</div>
+    </div>
+
+    <div class=" footerpage"></div>
+
+</body>
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * 导航栏
+         * footer CopyRight
+         */
+        $(".headerpage").load("headerpage.html");
+        $(".footerpage").load("footerpage.html");
+    });
+
+    $("#submitresult").click(function(){
+  $("#result").show();
+});
+</script>
+
+</html>

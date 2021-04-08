@@ -1,50 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <!-- bootstrap -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- bootstrap -->
   <link rel="stylesheet" href="./css/bootstrap.css">
-    <!-- my css -->
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- fb -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v10.0&appId=286015206361674&autoLogAppEvents=1"
+    nonce="SHVnXKRv"></script>
 </head>
+
 <body class="bg-white">
-    <!-- nav -->
-    <ul class="nav d-flex justify-content-around align-items-center">
-      <a href="./index.html"><img src="/img/logo.png" class="logo1" alt=""></a>
-        <div class="d-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="./celebrity.html">名人教學</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./recipe.html">營養食譜</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">活動辦法</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">認識守護</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">守護者聯盟</a>
-          </li>
+  <div id="fb-root"></div>
+
+  <!-- nav -->
+  <ul class="nav d-flex justify-content-around align-items-center">
+    <a href="./index.html"><img src="img/logo.png" class="logo1" alt=""></a>
+    <div class="d-flex">
+      <li class="nav-item">
+        <a class="nav-link" href="./celebrity.html">名人教學</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./recipe.html">營養食譜</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./active.html">活動辦法</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./know.html">認識守護</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./partner.html">守護者聯盟</a>
+      </li>
+    </div>
+    <div class="d-flex">
+      <li class="nav-item">
+        <a class="nav-link" href="./member.html">會員專區</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link login badge-pill" href="./login.html">我要登入</a>
+
+      </li>
+      <li>
+        <!-- <div
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+          </div>
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+        <!-- The JS SDK Login Button -->
+
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState()" >
+        </fb:login-button>
+
+        <div id="status">
         </div>
-        <div class="d-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="#">會員專區</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link login badge-pill" href="#">我要登入</a>
-          </li>
-        </div>
-        </ul>
+      </li>
+    </div>
+  </ul>
 </body>
 <script src="./js/jquery-3.5.1.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script>
+  // 串 fb
+  // window.fbAsyncInit = function() {
+  //     FB.init({
+  //       appId      : '286015206361674',
+  //       xfbml      : true,
+  //       version    : 'v10.0'
+  //     });
+  //     FB.AppEvents.logPageView();
+  //   };
+
+  //   (function(d, s, id){
+  //      var js, fjs = d.getElementsByTagName(s)[0];
+  //      if (d.getElementById(id)) {return;}
+  //      js = d.createElement(s); js.id = id;
+  //      js.src = "https://connect.facebook.net/en_US/sdk.js";
+  //      fjs.parentNode.insertBefore(js, fjs);
+  //    }(document, 'script', 'facebook-jssdk'));
+
+  //    FB.getLoginStatus(function(response) {
+  //     statusChangeCallback(response);
+  // });
+  // // 呼叫 FB.login()，即可叫用「登入」對話方塊。
+  // FB.login(function(response){
+  //   // handle the response 
+  // });
+
+  // 呼叫範例
+  // 此範例會在您的網頁有權限存取用戶的公開個人檔案和電子郵件的情況下要求用戶登入。
+
+  // FB.login(function(response) {
+  //   // handle the response
+  // }, {scope: 'public_profile,email'});
+
+  // 處理「登入」對話方塊回應
+  // 無論是連線或取消的回應都會將 authResponse 物件傳回至您進行 FB.login() 呼叫時所指定的回呼。這個回應可以在 FB.login() 內偵測和處理。
+
+  // 呼叫範例
+  // FB.login(function(response) {
+  //   if (response.status === 'connected') {
+  //     // Logged into your webpage and Facebook.
+  //   } else {
+  //     // The person is not logged into your webpage or we are unable to tell. 
+  //   }
+  // });
+
+
+  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+    console.log('statusChangeCallback');
+    console.log(response);                   // The current login status of the person.
+    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+      testAPI();
+    } else {                                 // Not logged into your webpage or we are unable to tell.
+      // document.getElementById('status').innerHTML = 'Please log ' +
+      //   'into this webpage.';
+    }
+  }
+
+
+  function checkLoginState() {               // Called when a person is finished with the Login Button.
+    FB.getLoginStatus(function (response) {   // See the onlogin handler
+      statusChangeCallback(response);
+    });
+  }
+
+
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '286015206361674',
+      cookie: true,                     // Enable cookies to allow the server to access the session.
+      xfbml: true,                     // Parse social plugins on this webpage.
+      version: 'v10.0'           // Use this Graph API version for this call.
+    });
+
+
+    FB.getLoginStatus(function (response) {   // Called after the JS SDK has been initialized.
+      statusChangeCallback(response);        // Returns the login status.
+    });
+  };
+
+  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function (response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
 
 </script>
+
 </html>

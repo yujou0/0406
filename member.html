@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/member.css">
+</head>
+<body class="bg-white">
+    <!-- header -->
+    <div class="headerpage"></div>
+    <!-- 內容 -->
+    
+        <section class="activesection01">
+            <img class="indexwords" src="img/index_img-01.2.png" alt="">
+        <img class="col-3 fbpic " src="https://picsum.photos/200/200/?random=1">
+
+        </section>
+        <section>
+        <div class="container">
+            <div class="row m-5">
+                <div class="col-12 d-flex flex-nowrap">
+                <h1 class="col-6 memberinfotitle">| 會員基本資料</h1>
+                <button type="col-3 button" class="col-2 editbutton">修改會員資料&nbsp;&nbsp;></button>
+                </div>
+                <span class="col-3 memberinfo">姓名</span>
+                <span class="col-3 memberinfo">性別</span>
+                <span class="col-3 memberinfo">身高</span>
+                <span class="col-12 memberinfo">照顧經驗</span>
+                <span class="col-6 memberinfo">email</span>
+                <span class="col-6 memberinfo">累積勳章數量</span>
+
+            </div>
+            <div class="d-flex justify-content-center">
+                <img width="50%" src="img/c_img-01.png" alt="">
+            </div>
+        </div>
+        <hr>
+        </section>
+        <section>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            <h1 class="m-5 memberinfotitle">| 填寫本周健康量表</h1>
+            <p>守護健康量表根據衛福部國民健康署、社團法人台灣自殺防治學會、中華民國家庭照顧者關懷總會相關檢測資料<br>來規劃。旨在快速、有效的協助會員了解自己在「身體」、「心理」、「社交」三大面向的健康狀態。</p>
+            <h2 class="m-5">您尚未完成上周處方檢測</h2>
+            <a href="./healthform.html" class="col-2 gotohealthformbutton m-3">填寫本周健康量表&nbsp;&nbsp;></a>
+            <h4 class="m-3">完成6次即無法點擊按鈕</h4>
+        </div>
+        </section>
+        <hr>
+        <section>
+        <div class="container">
+        <div class="d-flex m-5 align-items-center">
+            <h1 class="memberinfotitle">| 我的健康量表</h1>
+            <span class="ml-5">可點擊查看每周「健康量表」、「處方建議」歷史紀錄</span>
+        </div>
+        </div>
+        </section>
+      <div class=" footerpage"></div>
+
+</body>
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        /*公共部分
+         * 导航栏
+         * footer CopyRight
+         */
+        $(".headerpage").load("headerpage.html");
+        $(".footerpage").load("footerpage.html");
+    });
+
+</script>
+</html>

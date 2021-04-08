@@ -1,0 +1,8 @@
+.activesection01{
+    background-image: url("../img/index_img-01.3.png");
+    background-size: cover;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    }
